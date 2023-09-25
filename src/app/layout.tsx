@@ -24,8 +24,8 @@ export default function RootLayout({
             <p className="w-[60ch] text-gray-400 text-1xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices ligula in dolor laoreet, sed.</p>
           </header>
           {children}
-          <footer className="flex flex-col justify-center items-center">
-            <p>Blog - {currentYear}</p>
+          <footer className="flex flex-col justify-center items-center pt-10">
+            <p>Blog Example - {currentYear}</p>
           </footer>
         </main>
       </body>
