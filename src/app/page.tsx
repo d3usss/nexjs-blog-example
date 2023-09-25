@@ -9,7 +9,7 @@ export default function Home() {
         <p className="w-[60ch] text-gray-400 text-1xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices ligula in dolor laoreet, sed.</p>
       </header>
       <section className="flex justify-center items-start flex-wrap gap-4 mt-[2.5rem]">
-        {BlogPostMock.map((post) => (<BlogCard id={post.id} tags={post.tags} title={post.title} description={post.description} key={post.id} />))}
+         {BlogPostMock.map((post) => (<BlogCard id={post.id} tags={post.tags} title={post.title} description={post.description} key={post.id} imgUrl={post.imgUrl} />))}
       </section>
     </main>
   )
