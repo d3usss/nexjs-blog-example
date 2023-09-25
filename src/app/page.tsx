@@ -3,14 +3,21 @@ import BlogCard from "@/app/components/Blog-card";
 
 export default function Home() {
   return (
-    <main className="container max-w-[1920p] p-10 text-center">
-      <header className="flex flex-col justify-center items-center">
-        <h1>Next.js Blog Example</h1>
-        <p className="w-[60ch] text-gray-400 text-1xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultrices ligula in dolor laoreet, sed.</p>
-      </header>
-      <section className="flex justify-center items-start flex-wrap gap-4 mt-[2.5rem]">
-        {BlogPostMock.map((post) => (<BlogCard id={post.id} tags={post.tags} title={post.title} description={post.description} key={post.id} />))}
-      </section>
-    </main>
+    <article className="flex justify-center items-start flex-wrap gap-4 mt-[2.5rem]">
+      {BlogPostMock.map((post) => {
+        const { id, tags, title, description, imgUrl, authorName, autgorImgUrl, time, date } = post;
+        return (<BlogCard
+          tags={tags}
+          title={title}
+          description={description}
+          key={id}
+          imgUrl={imgUrl}
+          autgorImgUrl={autgorImgUrl}
+          authorName={authorName}
+          time={time}
+          date={date}
+        />)
+      })}
+    </article>
   )
 }
