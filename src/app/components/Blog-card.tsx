@@ -11,9 +11,9 @@ export interface BlogPost {
 export default function BlogCard({ imgUrl, title, description, tags }: BlogPost) {
 
     return (
-        <div className="w-[384px] h-[520px] bg-base-100 shadow-xl">
+        <div className="w-[384px] h-[fit-content] bg-base-100 shadow-xl">
             <figure>
-                <Image src={imgUrl ? imgUrl : '/images/blog-post.jpg'} alt={title} width={384} height={216} />
+                <Image src={imgUrl ? imgUrl : '/images/blog-post.jpg'} alt={title} width={385} height={255} className="max-h-[255px]"/>
             </figure>
             <div className="card-body text-left">
                 <div className="card-actions justify-start min-h-[20px] mb-2">
